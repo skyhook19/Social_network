@@ -1,5 +1,5 @@
-﻿using Books_01.Models.Authorization;
-using Books_01.Models.Authorization.ViewModels;
+﻿using Books_01.Models.UserLogic;
+using Books_01.Models.UserLogic.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -79,7 +79,8 @@ namespace Books_01.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName, Age = model.Age, Email = model.Email, LastName = model.LastName };
+                var user = new ApplicationUser() { UserName = model.UserName, Age = model.Age, Email = model.Email,
+                    LastName = model.LastName, City = model.City};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

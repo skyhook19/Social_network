@@ -6,12 +6,13 @@ using System.Linq;
 using System.Security.Claims;
 using System.Web;
 
-namespace Books_01.Models.Authorization
+namespace Books_01.Models.UserLogic
 {
     public class ApplicationUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>, IUser<int>
     {
         public string LastName { get; set; }
         public int? Age { get; set; }
+        public string City { get; set; }        
     }
 
 

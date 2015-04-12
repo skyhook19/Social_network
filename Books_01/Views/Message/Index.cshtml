@@ -1,0 +1,12 @@
+﻿@model ICollection<Books_01.Models.Message.Message>
+@{
+    ViewBag.Title = "Messages";
+}
+
+@foreach (var item in Model)
+{
+    <h4>От: @item.User</h4>
+    <p>@item.Content</p><hr/>
+    <span class="blog-post-meta">@item.Date</span>
+}
+

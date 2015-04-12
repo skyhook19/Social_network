@@ -1,4 +1,4 @@
-﻿using Books_01.Models.Authorization;
+﻿using Books_01.Models.UserLogic;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -18,14 +18,19 @@ namespace Books_01.Controllers
 
         private AppUserManager UserManager = new AppUserManager(new AppUserStore(new ApplicationUserContext()));
 
-        public async Task<ActionResult> Index(int id)
+
+        public async Task<ActionResult> Index(int? id)
         {
-            var user = await UserManager.FindByIdAsync(id);
-            if (user == null)
+            if (id != null)
             {
-                return HttpNotFound("User does not exist");
+                var user = await UserManager.FindByIdAsync(id.Value);
+                if (user == null)
+                {
+                    return HttpNotFound("User does not exist");
+                }
+                return View(model: user);
             }
-            return View(model: user);
+            return HttpNotFound();
         }
 	}
 }

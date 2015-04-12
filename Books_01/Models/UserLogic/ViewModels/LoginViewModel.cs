@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Books_01.Models.Authorization.ViewModels
+namespace Books_01.Models.UserLogic.ViewModels
 {
     public class LoginViewModel
     {

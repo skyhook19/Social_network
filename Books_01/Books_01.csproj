@@ -149,16 +149,20 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Authorization\ApplicationUser.cs" />
-    <Compile Include="Models\Authorization\ApplicationUserContext.cs" />
-    <Compile Include="Models\Authorization\AppUserManager.cs" />
-    <Compile Include="Models\Authorization\AppUserStore.cs" />
-    <Compile Include="Models\Authorization\ViewModels\LoginViewModel.cs" />
-    <Compile Include="Models\Authorization\ViewModels\RegisterViewModel.cs" />
+    <Compile Include="Models\Message\Message.cs" />
+    <Compile Include="Models\Message\MessageContext.cs" />
+    <Compile Include="Models\UserLogic\ApplicationUser.cs" />
+    <Compile Include="Models\UserLogic\ApplicationUserContext.cs" />
+    <Compile Include="Models\UserLogic\AppUserManager.cs" />
+    <Compile Include="Models\UserLogic\AppUserStore.cs" />
+    <Compile Include="Models\UserLogic\Sex.cs" />
+    <Compile Include="Models\UserLogic\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Models\UserLogic\ViewModels\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -168,6 +172,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

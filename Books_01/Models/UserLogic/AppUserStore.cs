@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Books_01.Models.Authorization
+namespace Books_01.Models.UserLogic
 {
     public interface IAppUserStore : IUserStore<ApplicationUser, int>
     {

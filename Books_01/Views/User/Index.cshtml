@@ -1,8 +1,12 @@
-﻿@model Books_01.Models.Authorization.ApplicationUser
+﻿@model Books_01.Models.UserLogic.ApplicationUser
 @{
     ViewBag.Title = "Index";
 }
 
-<h1>Имя: @Model.UserName</h1><hr />
-<h2>Фамилия: @Model.LastName</h2>
+<h3>Имя: @Model.UserName</h3>
+<h3>Фамилия: @Model.LastName</h3> <hr />
 
+@using (Html.BeginForm("Index", "Message", FormMethod.Post))
+{
+    <input type="submit" value="Отправить сообщение" class="btn btn-default" />
+}      

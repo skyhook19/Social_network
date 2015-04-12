@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Books_01.Models.Authorization.ViewModels
+namespace Books_01.Models.UserLogic.ViewModels
 {
     public class RegisterViewModel
     {
@@ -35,5 +35,10 @@ namespace Books_01.Models.Authorization.ViewModels
 
         [Display(Name="Возраст")]
         public int? Age { get; set; }
+
+
+        [Required]
+        [Display(Name="Город")]
+        public string City { get; set; }
     }
 }
